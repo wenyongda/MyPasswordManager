@@ -1,0 +1,10 @@
+*{margin:0;padding:0;}
+li{list-style:none;}
+.item{margin:0px auto}
+.item ul li{float:left;margin-right:20px;}
+.item ul li img{width:100px;cursor:pointer;}
+.lb_wrap{display:none;}
+.lightbox_bg{background:#000;filter:alpha(opacity=70);opacity:.7;position:absolute;left:0;top:0;width:100%;height:100%;z-index:99998;background-attachment:fixed;background-size:100% 100%;}
+.lightbox{position:absolute;left:0;top:0;width:100%;z-index:99999;text-align:center;}
+.lightbox i{position:absolute;height:61px;width:38px;top:50%;left:0;z-index:99999;background:transparent url(/Content/helps/images/themes.png) no-repeat left top;margin-top:-30.5px;cursor:pointer;}
+.lightbox i.next{left:auto;background-position:right top;right:0;z-index:99999;}

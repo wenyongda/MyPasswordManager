@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/kendo/cultures")
+
+    <link href="@Url.Content("~/Content/kendo.compatibility.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.2.504/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.2.504/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2016.2.504/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+    <link href="@Url.Content("~/Content/easyui/easyui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/layui/css/layui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/frame.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/fontawesome/css/font-awesome.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/popup-window.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/OpenCss.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/viewer.min.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("~/Scripts/kendo/2016.2.504/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.2.504/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.2.504/kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/messages/kendo.messages." + Culture.ToString() + ".js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2016.2.504/kendo.aspnetmvc.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+
+    @*<script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")"></script>*@
+    <script src="@Url.Content("~/Scripts/echarts.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.easyui.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.jqprint.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-migrate-1.1.0.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.LightBox.js")"></script>
+    <script src="@Url.Content("~/Scripts/viewer.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/store.min.js")"></script>
+    <script src="@Url.Content("~/Content/layui/layui.js")"></script>
+    <script src="@Url.Content("~/Content/clipboard.min.js")"></script>
+    <script src="@Url.Content("~/Content/jszip.min.js")"></script>
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("关于", "About", "Home")</li>
+                        <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
+            </footer>
+        </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <div id="example">
+        <div class="demo-section">
+            <h4>Horizontal</h4>
+            <ul id="horizontalMenu">
+                <li>
+                    Mens
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>
+                    Ladies
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>
+                    Kids
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>Sports</li>
+                <li>Brands</li>
+                <li>Accessories</li>
+                <li>Promotions</li>
+                <li>Contacts</li>
+                <li>About us</li>
+            </ul>
+
+            <h4 style="padding-top:2em; margin-top:30px">Vertical</h4>
+
+            <ul id="verticalMenu" style="width:150px; height:150px;">
+                <li>
+                    Mens
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>
+                    Ladies
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>
+                    Kids
+                    <ul>
+                        <li>Jackets and Coats</li>
+                        <li>Jeans</li>
+                        <li>Knitwear</li>
+                        <li>Shirts</li>
+                        <li>Belts</li>
+                        <li>Socks</li>
+                        <li>Fan Zone</li>
+                    </ul>
+                </li>
+                <li>Sports</li>
+                <li>Brands</li>
+                <li>News</li>
+                <li>About us</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#horizontalMenu").kendoMenu({
+                scrollable: true
+            });
+
+            $("#verticalMenu").kendoMenu({
+                scrollable: true,
+                orientation: "vertical"
+            });
+        });
+    </script>
+
+    <style>
+        .k-menu-scroll-wrapper.horizontal li.k-item.k-last {
+            border-right-width: 0;
+        }
+    </style>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿.auto-header ul.layui-nav {
+    background-color: #336699;
+}
+
+/*div.auto-header {
+    border-bottom: 5px solid #393D49;
+}*/
+
+.auto-header .layui-nav .layui-nav-item a {
+    color: #f0f8ff;
+}
+.layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a {
+    background-color: #09C;
+}
